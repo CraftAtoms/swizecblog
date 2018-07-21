@@ -25,9 +25,10 @@ exports.createPages = ({ graphql, actions }) => {
                 createPaginatedPages({
                     edges: posts,
                     createPage: createPage,
-                    pageTemplate: "src/templates/posts.js",
+                    pageTemplate: "src/pages/blog.js",
                     pageLength: 10,
-                    pathPrefix: "posts"
+                    pathPrefix: "blog"
+                    
                 })
 
                 posts.forEach(edge => {

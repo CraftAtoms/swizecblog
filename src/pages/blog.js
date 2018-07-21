@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
+import Layout from "../components/layout";
+
 
 const NavLink = props => {
     if (!props.test) {
@@ -9,20 +11,20 @@ const NavLink = props => {
     }
 };
 
-const IndexPage = ({ data, pathContext }) => {
-    const { group, index, first, last, pageCount } = pathContext;
+const IndexPage = ({ data, pageContext }) => {
+    const { group, index, first, last, pageCount } = pageContext;
     const previousUrl = index - 1 === 1 ? "" : (index - 1).toString();
     const nextUrl = (index + 1).toString();
 
     console.log(group)
 
     return (
-        <div>
+        <Layout>
             <h4>{pageCount} Pages</h4>
 
             {group.map(({ node }) => (
                 <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
-                    <Link to={'post/' + node.slug}>
+                    <Link to={'/post/' + node.slug}>
                         <h3>{node.title}</h3>
                     </Link>
 
@@ -32,12 +34,12 @@ const IndexPage = ({ data, pathContext }) => {
                 </div>
             ))}
             <div className="previousLink">
-                <NavLink test={first} url={'/posts/' + previousUrl} text="Go to Previous Page" />
+                <NavLink test={'/blog/' + first} url={previousUrl} text="Go to Previous Page" />
             </div>
             <div className="nextLink">
-                <NavLink test={last} url={'/posts/' + nextUrl} text="Go to Next Page" />
+                <NavLink test={last} url={'/blog/' + nextUrl} text="Go to Next Page" />
             </div>
-        </div>
+        </Layout>
     );
 };
 export default IndexPage;
