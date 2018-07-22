@@ -40,12 +40,12 @@ const IndexPage = ({ data, pageContext }) => {
                     {node.date}
                 </div>
             ))}
-            <div className="previousLink">
-                <NavLink test={'/blog/' + first} url={previousUrl} text="Go to Previous Page" />
-            </div>
-            <div className="nextLink">
+            <PrevLink className="previousLink">
+                <NavLink test={first} url={'/blog/' + previousUrl} text="Go to Previous Page" />
+            </PrevLink>
+            <NexLink className="nextLink">
                 <NavLink test={last} url={'/blog/' + nextUrl} text="Go to Next Page" />
-            </div>
+            </NexLink>
             </BlogList>
             </Grid>
         </Layout>
@@ -73,6 +73,13 @@ text-decoration: none;
   }
 }
 `
+const PrevLink = styled.div`
+float: left;
+`
+const NexLink = styled.div`
+float: right;
+`
+
 const Grid = styled.div`
 @media only screen and (min-width: 760px) {
 margin: 0 0 0 0;
