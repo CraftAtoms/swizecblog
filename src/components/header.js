@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 
+
 const Header = () => (
   <Wrapper>
     <h1>A geek with a hat</h1>
