@@ -4,7 +4,7 @@ module.exports = {
     subtitle: `Fetch Data From Local WP Install`,
     
   },
-  pathPrefix: `/swizecwp`,
+  pathPrefix: `/swizecblog`,
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
