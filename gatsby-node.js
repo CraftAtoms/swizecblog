@@ -25,8 +25,8 @@ exports.createPages = ({ graphql, actions }) => {
                 createPaginatedPages({
                     edges: posts,
                     createPage: createPage,
-                    pageTemplate: "src/pages/blog.js",
-                    pageLength: 10,
+                    pageTemplate: "src/templates/blog.js",
+                    pageLength: 30,
                     pathPrefix: "blog"
                     
                 })
