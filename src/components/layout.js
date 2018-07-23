@@ -33,7 +33,7 @@ const Layout = ({ children, data }) => (
          
          <Wrapper>
             <Head>
-              <List to="/" >
+              <List to="/blog/" >
                 <h3>Swizec Teller</h3>
               </List>
               <ul>
