@@ -32,20 +32,28 @@ const Layout = ({ children, data }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-         
+        
          <Wrapper>
+         <Grid>
             <Head>
               <List to="/blog/" >
                 <h3>Swizec Teller</h3>
               </List>
             </Head>
-          
+
+            <Menu>
             <NavBar/>
+            </Menu>
+            </Grid>
+           
+            
+
            
             
             {children}
             
         </Wrapper>
+        
       </div>
     )}
   />
@@ -57,27 +65,22 @@ Layout.propTypes = {
 
 export default Layout
 
-const Wrapper = styled.div`
+const Grid = styled.div`
+display: grid;
+grid-template-columns: 2fr;
+grid-template-areas: 
+" LO MN "
+`
 
+const Wrapper = styled.div`
 margin: 3rem auto;
 max-width: 960px;
 padding: 1.25rem 1rem;
 `
-const Pages = styled(Link)`
-text-decoration: none;
-text-align: right;
-margin: 0 .5rem 0 .5rem;
-padding: 10px;
-background-color: ;
-color: #7c51a1;
-:hover {
-    color: #fff;
-    background-color: #7c51a1;
 
-  }
-`
 
 const List = styled(Link)`
+
 text-decoration: none;
 color: black;
 :hover {
@@ -92,6 +95,12 @@ h3 {
 
 `
 const Head = styled.div`
-margin: 0 3rem 4.5rem ;
+grid-area: LO;
+margin: 0 3rem 1.5rem;
+padding: 1rem 0 0 0;
+
+`
+const Menu = styled.div`
+grid-area: MN;
 
 `
