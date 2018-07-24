@@ -49,7 +49,7 @@ class NameForm extends Component {
             <input type="email" name="fields[email]" value={this.state.value} onChange={this.handleChange} placeholder="Your Email" />
           </div>
           <div>
-            <button type="submit" name="submit" value="Teach me! 💌" data-drip-attribute="sign-up-button">Teach me! 💌</button>
+            <button type="submit" name="submit" value="Teach me! 💌" data-drip-attribute="sign-up-button">Teach me! <span role="img" aria-label="Snowman">💌</span></button>
           </div>
         </form>
         </Signup>

@@ -42,13 +42,13 @@ const Sidebar = () => (
         Hi I'm
         <br></br>
         <b>Swizec Teller</b>
-        <br></br>
-        I build things and write about it to help coders become engineers.
-        <br></br>
-        
-        Over the years I've helped over 10,000 engineers hone their craft. Engineers have used my books, articles, and talks to improve their technical skills, get promotions, change jobs, and ship their products faster.
         </p>
+
+        <p>I build things and write about it to help <strong>coders become engineers.</strong></p>
         
+        <p>Over the years I've helped over <strong>10,000 engineers</strong> hone their craft. Engineers have used my books, articles, and talks to improve their technical skills, get promotions, change jobs, and ship their products faster.
+        </p>
+
         <Icons>
         <Link to='/'>
         <h4>More About Me</h4>

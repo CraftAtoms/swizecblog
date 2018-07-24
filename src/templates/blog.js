@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import styled from 'styled-components';
+import Footer from '../components/LandingPage/footer'
 
 import Layout from "../components/layout";
 import Sidebar from '../components/sideBar';
@@ -25,6 +26,7 @@ const IndexPage = ({ data, pageContext }) => {
     return (
         <Layout>
             <Grid>
+            
             <Sidebar/>
             <Header/>
             
@@ -47,6 +49,7 @@ const IndexPage = ({ data, pageContext }) => {
                 <NavLink test={last} url={'/blog/' + nextUrl} text="Go to Next Page" />
             </NexLink>
             </BlogList>
+            <Footer/>
             </Grid>
         </Layout>
     );
@@ -91,6 +94,7 @@ grid-template-columns: auto 2fr;
 grid-template-areas: 
 " SB HD "
 " SB PL "
+" FT FT "
 }
 @media only screen and (max-width: 760px) {
 margin: 0 0 0 0;
@@ -103,6 +107,7 @@ grid-template-areas:
 " HD "
 " PL "
 " SB "
+" FT "
 }
 @media only screen and (max-width: 260px) {
 margin: 0 0 0 0;
@@ -115,6 +120,7 @@ grid-template-areas:
 " HD "
 " PL "
 " SB "
+" FT "
 }
 `
 

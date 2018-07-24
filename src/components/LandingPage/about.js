@@ -44,7 +44,7 @@ const About = ({ siteTitle }) => (
       </h2>
       
       
-      <p>Hi, I’m Swizec 👋 I help you become a better engineer</p>
+      <p>Hi, I’m Swizec <span role="img" aria-label="Wave">👋 </span>I help you become a better engineer</p>
       <p>Over the years I've helped hundreds of people just like you improve their craft through
         <b> books, articles, workshops,</b> and
         <b> talks</b>. Engineers from companies like Uber, Apple, 23andMe, and many others have used my writing to get better
@@ -65,7 +65,7 @@ const About = ({ siteTitle }) => (
       </p> 
       <div>
       <Container>
-          <p>Some of my work has been featured in 👇</p>
+          <p>Some of my work has been featured in <span role="img" aria-label="Point">👇</span></p>
           <Featured src={LH} alt='LifeHacker'/>
           <Featured src={PH} alt='PragHub'/>
           <Featured src={MP} alt='Magpi'/>

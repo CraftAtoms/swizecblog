@@ -43,8 +43,8 @@ button {
 const Jumbotron = () => (
 <Wrapper>
     <h1>Want to become a better frontend engineer?</h1>
-      <p>👋 Hi I'm Swizec the JavaScript guy — I'm here to help!</p>
-      <p>Subscribe 💌 below and you'll get my
+      <p><span role="img" aria-label="Hand">👋</span>Hi I'm Swizec the JavaScript guy — I'm here to help!</p>
+      <p>Subscribe<span role="img" aria-label="Letter">💌</span>below and you'll get my
         <strong> interactive JavaScript cheatsheet</strong> 📖 right away.</p>
       <p>After that I'll send you weekly emails about
         <strong> React</strong>,
@@ -71,7 +71,7 @@ const Jumbotron = () => (
       </Quotes>
       
       <BTN>
-      <Link to="/blog"><button>Jump to the Blog 👉</button></Link>
+      <Link to="/blog"><button>Jump to the Blog <span role="img" aria-label="Point">👉</span></button></Link>
       </BTN>
       
       </Wrapper>
