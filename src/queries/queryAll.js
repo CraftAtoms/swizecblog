@@ -8,14 +8,38 @@ module.exports = `
                 node {
                     id  
                     slug
+                    tags {
+                        name
+                      }
+                      categories {
+                        name
+                      }
                     status
                     template
                     format
                     title
-                    date
+                    date(formatString: "MMMM DD, YYYY")
                 }
             }
         }
+        allFile {
+            edges {
+              node {
+                extension
+                dir
+                modifiedTime
+              }
+            }
+          }
+          allWordpressPage {
+            edges {
+              node {
+                slug
+                title
+                id
+              }
+            }
+          }
         
     }
 `

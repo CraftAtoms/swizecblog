@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
 
 
+
 html {
   font-family: 'Lora', serif;
   -ms-text-size-adjust: 100%;
@@ -63,7 +64,9 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-weight: bolder;
+
+  font-size: 3em;
   margin: .67em 0;
 }
 mark {
@@ -233,6 +236,8 @@ h1 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: 'Lora', serif;
+  font-weight: bolder;
+
 
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -251,7 +256,7 @@ h2 {
   color: inherit;
   font-family: 'Lora', serif;
 
-  font-weight: bold;
+  font-weight: bolder;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;

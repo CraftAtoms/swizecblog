@@ -4,6 +4,8 @@ import FormName from '../components/LandingPage/form'
 import Footer from '../components/LandingPage/footer'
 
 import Layout from "./layout";
+import './prism.css'
+import 'prismjs';
 
 const Signup = styled.div`
 blockquote {
@@ -18,6 +20,8 @@ class PostTemplate extends Component {
 
         return (
             <Layout>
+                       
+
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 <hr></hr>

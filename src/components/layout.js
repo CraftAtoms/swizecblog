@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from "gatsby-link";
 import NavBar from '../components/navBar.js'
-
 import styled from 'styled-components';
 import { StaticQuery, graphql } from "gatsby"
-
 import './layout.css'
+import './prism.css'
+import 'prismjs';
 
 
 
@@ -30,8 +30,12 @@ const Layout = ({ children, data }) => (
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
+          ]}>
+        
+        <link href="themes/prism.css" rel="stylesheet" />
+        <script src="prism.js"></script>
+        
+      </Helmet>
         
          <Wrapper>
          <Grid>
@@ -45,13 +49,9 @@ const Layout = ({ children, data }) => (
             <NavBar/>
             </Menu>
             </Grid>
-           
-            
-
-           
-            
+          
             {children}
-            
+
         </Wrapper>
         
       </div>
@@ -76,6 +76,7 @@ const Wrapper = styled.div`
 margin: 3rem auto;
 max-width: 960px;
 padding: 1.25rem 1rem;
+
 `
 
 

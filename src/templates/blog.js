@@ -8,6 +8,7 @@ import Sidebar from '../components/sideBar';
 import Header from '../components/header'
 
 
+
 const NavLink = props => {
     if (!props.test) {
         return <Link to={props.url}>{props.text}</Link>;
