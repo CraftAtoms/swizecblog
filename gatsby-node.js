@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
                 const posts = result.data.allWordpressPost.edges
 
               
-                _.each(result.data.allWordpressPost.edges, edge => {
+                posts.forEach(edge => {
                     // grab all the tags and categories for later use
                     edge.node.tags.forEach(tag => {
                       tags.push(tag.name)
@@ -33,8 +33,9 @@ exports.createPages = ({ graphql, actions }) => {
                     edge.node.categories.forEach(category => {
                       categories.push(category.name)
                     })
-                    })
-
+                })
+                     
+                    
                 createPaginatedPages({
                     edges: posts,
                     createPage: createPage,
@@ -61,7 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
                 const catSet = new Set(categories)
                 tagsSet.forEach(tag => {
                   createPage({
-                    path: `/tags${_.kebabCase(tag)}/`,
+                    path: `/tags/${_.kebabCase(tag)}/`,
                     component: slash(tagsTemplate),
                     context: {
                       id: tag
@@ -70,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
                 })
                 catSet.forEach(cat => {
                     createPage({
-                      path: `/categories${_.kebabCase(cat)}/`,
+                      path: `/categories/${_.kebabCase(cat)}/`,
                       component: slash(categoriesTemplate),
                       context: {
                         id: cat
@@ -80,7 +81,8 @@ exports.createPages = ({ graphql, actions }) => {
                   resolve()
    
 
-            })
+                
+        })
         )
     });
 };
